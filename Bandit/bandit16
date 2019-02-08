@@ -1,0 +1,73 @@
+bandit15@bandit:~$ openssl s_client -connect localhost:30001
+CONNECTED(00000003)
+depth=0 CN = localhost
+verify error:num=18:self signed certificate
+verify return:1
+depth=0 CN = localhost
+verify return:1
+---
+Certificate chain
+ 0 s:/CN=localhost
+   i:/CN=localhost
+---
+Server certificate
+-----BEGIN CERTIFICATE-----
+MIICBjCCAW+gAwIBAgIENHv1njANBgkqhkiG9w0BAQUFADAUMRIwEAYDVQQDDAls
+b2NhbGhvc3QwHhcNMTkwMTEzMTkzNDMwWhcNMjAwMTEzMTkzNDMwWjAUMRIwEAYD
+VQQDDAlsb2NhbGhvc3QwgZ8wDQYJKoZIhvcNAQEBBQADgY0AMIGJAoGBALOkCuqD
+hi2X8nQ1Fu/p2hHx+3SeORNWt76H7Q/Wr8ZYapwViACu7h/d+Gn1Z4/1ZVN5Ukz3
+fiS7UiA73eJg2iLo9rXzPw01hVB+IA4RtSTBmsUm7vwIgNDv5RsrYLl6JCGaZ+ns
+/z5ihBHILWT3zvLyAn98HUiVAjAahiuwBtHxAgMBAAGjZTBjMBQGA1UdEQQNMAuC
+CWxvY2FsaG9zdDBLBglghkgBhvhCAQ0EPhY8QXV0b21hdGljYWxseSBnZW5lcmF0
+ZWQgYnkgTmNhdC4gU2VlIGh0dHBzOi8vbm1hcC5vcmcvbmNhdC8uMA0GCSqGSIb3
+DQEBBQUAA4GBABiUJgikW8Ig5kuqkB3VCZiACRm5bsC4T5EH531RtzDi6Yywnqm3
+xDbfWzLIoWpVq2U2pViIVsPmQ6nGjASQSlQhxsg9kZBaqYB26AcgrmbVIruywtij
+JXvZkb10yrXeqtfK5bO8+kILa8XSBVbIXQ55Cn4HiHE7NtDZBOLBTl2/
+-----END CERTIFICATE-----
+subject=/CN=localhost
+issuer=/CN=localhost
+---
+No client certificate CA names sent
+Peer signing digest: SHA512
+Server Temp Key: X25519, 253 bits
+---
+SSL handshake has read 1019 bytes and written 269 bytes
+Verification error: self signed certificate
+---
+New, TLSv1.2, Cipher is ECDHE-RSA-AES256-GCM-SHA384
+Server public key is 1024 bit
+Secure Renegotiation IS supported
+Compression: NONE
+Expansion: NONE
+No ALPN negotiated
+SSL-Session:
+    Protocol  : TLSv1.2
+    Cipher    : ECDHE-RSA-AES256-GCM-SHA384
+    Session-ID: 0ABD66050F963C9866F4775AAF6BDFC667BE4141A5BDDD26DF8B93FFB443DD61
+    Session-ID-ctx: 
+    Master-Key: B003F88C74155B158E4E95708570C122FAA364664D7B4110D6814D0B08ACA8034A17E4DEE48BC29159100717BCF26C97
+    PSK identity: None
+    PSK identity hint: None
+    SRP username: None
+    TLS session ticket lifetime hint: 7200 (seconds)
+    TLS session ticket:
+    0000 - 32 a4 5b 29 4b c8 06 db-a5 7e c7 95 4f fd c4 c1   2.[)K....~..O...
+    0010 - 61 1b a1 d8 f5 df ff b2-76 19 5b 46 5d e6 4d d9   a.......v.[F].M.
+    0020 - 83 5d 62 66 a5 ee 8b 4b-f4 e8 90 d8 41 a3 85 e1   .]bf...K....A...
+    0030 - 73 0a be b2 f7 94 7a 11-f0 7f d7 55 69 4b f1 d9   s.....z....UiK..
+    0040 - bf 8a e1 eb 8b 8b ca fd-85 eb 2d 13 ab 62 a5 e1   ..........-..b..
+    0050 - 19 76 3c e5 a7 c2 5e dd-53 bc 52 32 41 40 fe e4   .v<...^.S.R2A@..
+    0060 - 0c 01 0d 29 83 8d 75 fc-63 ca cb 87 17 e7 f7 8e   ...)..u.c.......
+    0070 - 53 f2 ac 34 68 27 74 e3-00 86 59 d0 2f 28 88 89   S..4h't...Y./(..
+    0080 - a0 17 37 26 8a 74 52 33-ed bd bc c1 75 ce 5a 46   ..7&.tR3....u.ZF
+    0090 - 50 20 bb cc e2 84 8d 82-0b 9a d5 89 15 46 bd 79   P ...........F.y
+
+    Start Time: 1549228793
+    Timeout   : 7200 (sec)
+    Verify return code: 18 (self signed certificate)
+    Extended master secret: yes
+---
+BfMYroe26WYalil77FoDi9qh59eK5xNr
+Correct!
+cluFn7wTiGryunymYOu4RcffSxQluehd
+

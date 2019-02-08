@@ -1,0 +1,9 @@
+same as bandit26, but this time to get shell,
+
+first set vi interpreter path = /bin/bash using  :set shell=/bin/bash
+
+and start shell :shell
+
+bandit26@bandit:~$ ./bandit27-do cat /etc/bandit_pass/bandit27
+3ba3118a22e93127a4ed485be72ef5ea
+

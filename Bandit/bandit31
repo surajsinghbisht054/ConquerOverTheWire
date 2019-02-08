@@ -1,0 +1,9 @@
+bandit30@bandit:/tmp/tmp.alN597pJS6/repo/.git$ cat packed-refs 
+# pack-refs with: peeled fully-peeled 
+3aa4c239f729b07deb99a52f125893e162daac9e refs/remotes/origin/master
+f17132340e8ee6c159e0a4a6bc6f80e1da3b1aea refs/tags/secret
+
+
+bandit30@bandit:/tmp/tmp.alN597pJS6/repo/.git$ git show f17132340e8ee6c159e0a4a6bc6f80e1da3b1aea
+47e603bb428404d265f59c42920d81e5
+

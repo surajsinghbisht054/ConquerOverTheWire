@@ -1,0 +1,35 @@
+bandit29@bandit:/tmp/tmp.MGV0E0TK9m$ cd repo
+bandit29@bandit:/tmp/tmp.MGV0E0TK9m/repo$ ls
+README.md
+bandit29@bandit:/tmp/tmp.MGV0E0TK9m/repo$ git branch
+* master
+bandit29@bandit:/tmp/tmp.MGV0E0TK9m/repo$ git help branch
+bandit29@bandit:/tmp/tmp.MGV0E0TK9m/repo$ git branch -a
+* master
+  remotes/origin/HEAD -> origin/master
+  remotes/origin/dev
+  remotes/origin/master
+  remotes/origin/sploits-dev
+bandit29@bandit:/tmp/tmp.MGV0E0TK9m/repo$ git checkout remotes/origin/dev
+Note: checking out 'remotes/origin/dev'.
+
+You are in 'detached HEAD' state. You can look around, make experimental
+changes and commit them, and you can discard any commits you make in this
+state without impacting any branches by performing another checkout.
+
+If you want to create a new branch to retain commits you create, you may
+do so (now or later) by using -b with the checkout command again. Example:
+
+  git checkout -b <new-branch-name>
+
+HEAD is now at 33ce2e9... add data needed for development
+bandit29@bandit:/tmp/tmp.MGV0E0TK9m/repo$ ls
+code  README.md
+bandit29@bandit:/tmp/tmp.MGV0E0TK9m/repo$ cat README.md 
+# Bandit Notes
+Some notes for bandit30 of bandit.
+
+## credentials
+
+- username: bandit30
+- password: 5b90576bedb2cc04c86a9e924ce42faf

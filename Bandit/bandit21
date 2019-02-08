@@ -1,0 +1,11 @@
+bandit20@bandit:~$ ./suconnect 4444
+Read: GbKksEFF4yrVs6il55v6gwY5aVje5f0j
+Password matches, sending next password
+
+
+bandit20@bandit:~$ nc -lvp 4444
+listening on [any] 4444 ...
+connect to [127.0.0.1] from localhost [127.0.0.1] 49752
+GbKksEFF4yrVs6il55v6gwY5aVje5f0j
+gE269g2h3mw3pwgrj0Ha9Uoqen1c9DGr
+

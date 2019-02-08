@@ -1,0 +1,2 @@
+bandit8@bandit:~$ cat data.txt | sort | uniq -c | grep "1 "
+      1 UsvVyFSfZZWbi6wgC7dAFyFuR6jQQUhR

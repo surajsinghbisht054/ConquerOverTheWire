@@ -1,0 +1,14 @@
+first run 
+less | ssh * to receive complete buffer
+
+
+target is using /usr/bin/showtext
+
+check here
+cat /etc/passwd | grep bandit26
+
+small your terminal, that will trigger more command to show in interact way,
+then, hit 'v' to enter vim editor more, from there, :r /etc/bandit_pass/bandit26 => to execute command
+
+
+5czgV9L3Xx8JPOyRbXh6lQbmIOWvPT6Z

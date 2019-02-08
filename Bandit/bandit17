@@ -1,0 +1,109 @@
+bandit16@bandit:~$ openssl s_client -connect localhost:31790
+CONNECTED(00000003)
+depth=0 CN = localhost
+verify error:num=18:self signed certificate
+verify return:1
+depth=0 CN = localhost
+verify return:1
+---
+Certificate chain
+ 0 s:/CN=localhost
+   i:/CN=localhost
+---
+Server certificate
+-----BEGIN CERTIFICATE-----
+MIICBjCCAW+gAwIBAgIELHlSDDANBgkqhkiG9w0BAQUFADAUMRIwEAYDVQQDDAls
+b2NhbGhvc3QwHhcNMTkwMTEzMTkzNDMwWhcNMjAwMTEzMTkzNDMwWjAUMRIwEAYD
+VQQDDAlsb2NhbGhvc3QwgZ8wDQYJKoZIhvcNAQEBBQADgY0AMIGJAoGBAJ4UdWRN
+ZmKD+47wp9PM6kCsCLM6u3WD1ByGlnJn3HeILlCxId2oaklGkOx/BzYcX8m0U+wU
+XrC8/lC0o1YHfgfCaVht4ubhmrlD4iUnY7pABtIsrIdLgz/Ee54121GG2+ZZfmpq
+mMytFoWyHSQUNFtavUMPYkzNCI8FO7GiLIZrAgMBAAGjZTBjMBQGA1UdEQQNMAuC
+CWxvY2FsaG9zdDBLBglghkgBhvhCAQ0EPhY8QXV0b21hdGljYWxseSBnZW5lcmF0
+ZWQgYnkgTmNhdC4gU2VlIGh0dHBzOi8vbm1hcC5vcmcvbmNhdC8uMA0GCSqGSIb3
+DQEBBQUAA4GBAEtU/dx2IFDG7q3IcOmYkrvzHlmUKMXPiQqJgim/nzAo89is3A2B
+S9+oWaaCX+Z5Hz97h7nJNFQHTjpoKKP0wS7ZqdpXFXFOVa4rD12hPEebqE/fCPiC
+bOoJkI78ZtUg3fbal8XPHyQK4QcOfgfVAIjSgoUfiNJYQz+0Yqh6EMEp
+-----END CERTIFICATE-----
+subject=/CN=localhost
+issuer=/CN=localhost
+---
+No client certificate CA names sent
+Peer signing digest: SHA512
+Server Temp Key: X25519, 253 bits
+---
+SSL handshake has read 1019 bytes and written 269 bytes
+Verification error: self signed certificate
+---
+New, TLSv1.2, Cipher is ECDHE-RSA-AES256-GCM-SHA384
+Server public key is 1024 bit
+Secure Renegotiation IS supported
+Compression: NONE
+Expansion: NONE
+No ALPN negotiated
+SSL-Session:
+    Protocol  : TLSv1.2
+    Cipher    : ECDHE-RSA-AES256-GCM-SHA384
+    Session-ID: 409C5ED7E4E1ADD7E8FBC6D8DDE6A92710FEF32F592AF671954C9EF7E6599910
+    Session-ID-ctx: 
+    Master-Key: 7BD8AC43320CE8C78615C70B9E64DD8010F5551942C69FCA73F7C847AB878DCA50FB085CBC0E8392E4FCDAAF1C450242
+    PSK identity: None
+    PSK identity hint: None
+    SRP username: None
+    TLS session ticket lifetime hint: 7200 (seconds)
+    TLS session ticket:
+    0000 - fe 2e da f4 cd cd e9 23-46 73 02 6e ca e6 93 3a   .......#Fs.n...:
+    0010 - 30 e6 2c 6b f1 3a 8f bd-0a 33 98 47 8b a5 53 d6   0.,k.:...3.G..S.
+    0020 - fd b1 0e 44 da 95 3b a7-20 79 1d d5 87 13 c0 3a   ...D..;. y.....:
+    0030 - 2a 36 74 6c a1 24 5c 92-7b f3 f1 c8 61 a7 7c cc   *6tl.$\.{...a.|.
+    0040 - d2 ef 68 96 19 a9 0e f7-1f fb c7 3f 62 f3 86 5a   ..h........?b..Z
+    0050 - 3a 97 83 5b 25 27 93 5d-0b 44 2b 2c 27 0d 17 1a   :..[%'.].D+,'...
+    0060 - 34 a1 cf 70 19 81 24 37-5f 8f 45 9c 5b 6d ea dd   4..p..$7_.E.[m..
+    0070 - 15 cd 40 23 a2 bf 9b 8c-fb b7 ba 2c ae ce 4f 17   ..@#.......,..O.
+    0080 - 62 e8 03 84 84 4e f7 de-94 ef 1f 70 0a 64 75 c8   b....N.....p.du.
+    0090 - d9 77 12 97 68 70 8a 1a-42 ba 89 a9 be cb c4 c7   .w..hp..B.......
+
+    Start Time: 1549229162
+    Timeout   : 7200 (sec)
+    Verify return code: 18 (self signed certificate)
+    Extended master secret: yes
+---
+cluFn7wTiGryunymYOu4RcffSxQluehd
+Correct!
+-----BEGIN RSA PRIVATE KEY-----
+MIIEogIBAAKCAQEAvmOkuifmMg6HL2YPIOjon6iWfbp7c3jx34YkYWqUH57SUdyJ
+imZzeyGC0gtZPGujUSxiJSWI/oTqexh+cAMTSMlOJf7+BrJObArnxd9Y7YT2bRPQ
+Ja6Lzb558YW3FZl87ORiO+rW4LCDCNd2lUvLE/GL2GWyuKN0K5iCd5TbtJzEkQTu
+DSt2mcNn4rhAL+JFr56o4T6z8WWAW18BR6yGrMq7Q/kALHYW3OekePQAzL0VUYbW
+JGTi65CxbCnzc/w4+mqQyvmzpWtMAzJTzAzQxNbkR2MBGySxDLrjg0LWN6sK7wNX
+x0YVztz/zbIkPjfkU1jHS+9EbVNj+D1XFOJuaQIDAQABAoIBABagpxpM1aoLWfvD
+KHcj10nqcoBc4oE11aFYQwik7xfW+24pRNuDE6SFthOar69jp5RlLwD1NhPx3iBl
+J9nOM8OJ0VToum43UOS8YxF8WwhXriYGnc1sskbwpXOUDc9uX4+UESzH22P29ovd
+d8WErY0gPxun8pbJLmxkAtWNhpMvfe0050vk9TL5wqbu9AlbssgTcCXkMQnPw9nC
+YNN6DDP2lbcBrvgT9YCNL6C+ZKufD52yOQ9qOkwFTEQpjtF4uNtJom+asvlpmS8A
+vLY9r60wYSvmZhNqBUrj7lyCtXMIu1kkd4w7F77k+DjHoAXyxcUp1DGL51sOmama
++TOWWgECgYEA8JtPxP0GRJ+IQkX262jM3dEIkza8ky5moIwUqYdsx0NxHgRRhORT
+8c8hAuRBb2G82so8vUHk/fur85OEfc9TncnCY2crpoqsghifKLxrLgtT+qDpfZnx
+SatLdt8GfQ85yA7hnWWJ2MxF3NaeSDm75Lsm+tBbAiyc9P2jGRNtMSkCgYEAypHd
+HCctNi/FwjulhttFx/rHYKhLidZDFYeiE/v45bN4yFm8x7R/b0iE7KaszX+Exdvt
+SghaTdcG0Knyw1bpJVyusavPzpaJMjdJ6tcFhVAbAjm7enCIvGCSx+X3l5SiWg0A
+R57hJglezIiVjv3aGwHwvlZvtszK6zV6oXFAu0ECgYAbjo46T4hyP5tJi93V5HDi
+Ttiek7xRVxUl+iU7rWkGAXFpMLFteQEsRr7PJ/lemmEY5eTDAFMLy9FL2m9oQWCg
+R8VdwSk8r9FGLS+9aKcV5PI/WEKlwgXinB3OhYimtiG2Cg5JCqIZFHxD6MjEGOiu
+L8ktHMPvodBwNsSBULpG0QKBgBAplTfC1HOnWiMGOU3KPwYWt0O6CdTkmJOmL8Ni
+blh9elyZ9FsGxsgtRBXRsqXuz7wtsQAgLHxbdLq/ZJQ7YfzOKU4ZxEnabvXnvWkU
+YOdjHdSOoKvDQNWu6ucyLRAWFuISeXw9a/9p7ftpxm0TSgyvmfLF2MIAEwyzRqaM
+77pBAoGAMmjmIJdjp+Ez8duyn3ieo36yrttF5NSsJLAbxFpdlc1gvtGCWW+9Cq0b
+dxviW8+TFVEBl1O4f7HVm6EpTscdDxU+bCXWkfjuRb7Dy9GOtt9JPsX8MBTakzh3
+vBgsyi/sN3RqRBcGU40fOoZyfAMT8s1m/uYv52O6IgeuZ/ujbjY=
+-----END RSA PRIVATE KEY-----
+
+closed
+
+
+[1]+  Stopped                 ssh bandit17@bandit.labs.overthewire.org -p 2220 -i ~/Desktop/Challenges/Overthewire/Bandit/bandit17key
+suraj@bitforestinfo:~$ chmod 600 ~/Desktop/Challenges/Overthewire/Bandit/bandit17key 
+suraj@bitforestinfo:~$ ssh bandit17@bandit.labs.overthewire.org -p 2220 -i ~/Desktop/Challenges/Overthewire/Bandit/bandit17key 
+This is a OverTheWire game server. More information on http://www.overthewire.org/wargames
+
+Linux bandit 4.18.12 x86_64 GNU/Linux
+
