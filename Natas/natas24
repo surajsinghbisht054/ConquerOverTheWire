@@ -1,0 +1,10 @@
+USERNAME : natas24
+PASSWORD : OsRmXFguozKpTZZ5X14zNO43379LZveg
+
+
+
+in 23 level, use Password = 22iloveyou
+because 
+strstr($_REQUEST["passwd"],"iloveyou") ==> checks first occurance
+ && 
+($_REQUEST["passwd"] > 10 ) ==> treating string like integer from starting

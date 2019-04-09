@@ -1,0 +1,9 @@
+view-source:http://natas6.natas.labs.overthewire.org/includes/secret.inc
+
+<?
+$secret = "FOEIUWGHFEEUHOFUOIU";
+?>
+
+
+Username : natas7
+Password : 7z3hEENjQtflzgnT29q7wAvMNfZdh0i9

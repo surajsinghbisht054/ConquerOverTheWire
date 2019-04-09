@@ -1,0 +1,10 @@
+http://natas3.natas.labs.overthewire.org/robots.txt
+User-agent: *
+Disallow: /s3cr3t/
+
+http://natas3.natas.labs.overthewire.org/s3cr3t/users.txt
+
+Username : natas4
+Password : Z9tkRkWmpt9Qr7XrR5jWRkgOU901swEZ
+
+
