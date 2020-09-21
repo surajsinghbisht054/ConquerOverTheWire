@@ -3,3 +3,32 @@ Password : The password for natas12 is EDXp0pS26wLKHZy1rDBPUZk0RKfLGIR3
 
 
 Check natas12.py cookie cracking key
+
+$ python natas11.py 
+data=ClVLIh4ASCsCBE8lAxMacFMOXTlTWxooFhRXJh4FGnBTVF4sFxFeLFMK
+
+
+
+
+
+import base64
+
+
+def xor(a, b):
+	s = ""
+	for a,b in zip(a,b):
+		s+= chr(ord(a) ^ ord(b))
+	return s
+
+KEY = '{"showpassword":"no","bgcolor":"#ffffff"}'
+KEY=KEY[:32]
+COOKIE = "ClVLIh4ASCsCBE8lAxMacFMZV2hdVVotEhhUJQNVAmhSEV4sFxFeaAw="
+COOKIE = base64.decodestring(COOKIE)[:32]
+KEY=xor(KEY, COOKIE)
+
+
+DATA = '{"showpassword":"yes","bgcolor":"#ffffff"}'
+print base64.encodestring(xor(DATA,KEY+KEY[:10]))
+
+
+

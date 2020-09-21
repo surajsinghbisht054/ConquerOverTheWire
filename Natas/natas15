@@ -5,3 +5,4 @@ use python -c "import urllib; print urllib.quote('target_url_here')"
 USERNAME : natas15
 password : AwWj0w5cvxrZiONgZ9J5stNVkmxdk39J
 
+username=" or "1" ="1&password=" or "1"="1

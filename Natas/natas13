@@ -1,4 +1,5 @@
-Interestingly User Can Control File Extension, By manipulating form hidden filename data feild value extension.
+Interestingly User Can Control File Extension, 
+By manipulating form hidden filename data feild value extension.
 
 So, Just create a file test.php
 :~/Desktop$ cat test2.php 

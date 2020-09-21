@@ -3,3 +3,11 @@ python -c 'import base64, binascii; print (base64.b64decode(binascii.unhexlify("
 
 Username : natas9
 Password : W0mMhUcRRnG8dcghE4qvk3JA9lGt8nDl
+
+
+$ php -a
+php > echo base64_decode(strrev(hex2bin($encodedSecret)));
+oubWYf2kBq
+php > exit
+
+

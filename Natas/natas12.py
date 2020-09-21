@@ -7,6 +7,7 @@ import urllib
 
 default_data = '{"showpassword":"no","bgcolor":"#ffffff"}'
 required_data = '{"showpassword":"yes","bgcolor":"#ffffff"}'
+
 def xor(data, key):
     out = ''
     for n, i in enumerate(data):

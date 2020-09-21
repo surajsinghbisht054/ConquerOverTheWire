@@ -1,3 +1,4 @@
 bandit12@bandit:/tmp/check123$ xxd -r data.txt | gzip -d | bzip2 -d | gzip -d | tar -x --format=posix -O | tar -x --format=posix -O | bzip2 -d | tar -x --format=posix -O | gzip -d 
 The password is 8ZjyCRiBWFYkneahHwxCv3wb2a1ORpYL
 
+$ xxd -r data.txt | zcat | bzcat| zcat | tar -xvf - -O | tar -xvf - -O | bzcat | tar -xvf - -O | zcat

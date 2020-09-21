@@ -1,0 +1,167 @@
+
+## read me files
+ This machine might hold several wargames. 
+  If you are playing "somegame", then:
+
+    * USERNAMES are somegame0, somegame1, ...
+    * Most LEVELS are stored in /somegame/.
+    * PASSWORDS for each level are stored in /etc/somegame_pass/.
+
+  Write-access to homedirectories is disabled. It is advised to create a
+  working directory with a hard-to-guess name in /tmp/.  You can use the
+  command "mktemp -d" in order to generate a random and hard to guess
+  directory in /tmp/.  Read-access to both /tmp/ and /proc/ is disabled
+  so that users can not snoop on eachother. Files and directories with 
+  easily guessable or short names will be periodically deleted!
+	
+
+
+--[ Tips ]--
+
+  This machine has a 64bit processor and many security-features enabled
+  by default, although ASLR has been switched off.  The following
+  compiler flags might be interesting:
+
+    -m32                    compile for 32bit
+    -fno-stack-protector    disable ProPolice
+    -Wl,-z,norelro          disable relro 
+
+  In addition, the execstack tool can be used to flag the stack as
+  executable on ELF binaries.
+
+  Finally, network-access is limited for most levels by a local
+  firewall.
+
+--[ Tools ]--
+
+ For your convenience we have installed a few usefull tools which you can find
+ in the following locations:
+
+    * pwndbg (https://github.com/pwndbg/pwndbg) in /usr/local/pwndbg/
+    * peda (https://github.com/longld/peda.git) in /usr/local/peda/
+    * gdbinit (https://github.com/gdbinit/Gdbinit) in /usr/local/gdbinit/
+    * pwntools (https://github.com/Gallopsled/pwntools)
+    * radare2 (http://www.radare.org/)
+    * checksec.sh (http://www.trapkit.de/tools/checksec.html) in /usr/local/bin/checksec.sh
+
+
+
+- bandit0
+`ssh bandit0@bandit.labs.overthewire.org -p 2220` and password `bandit0`.
+we found `boJ9jbbUNNfktd78OOpsqOltutMc3MY1`
+
+- bandit1
+here, from was `-` as the filename so access this file by `./-`
+we found `CV1DtqXWVFXTvM2F0k09SHz0YwRINYA9`
+
+
+- bandit2
+
+```
+bandit2@bandit:~$ ls
+spaces in this filename
+bandit2@bandit:~$ ls -a
+.  ..  .bash_logout  .bashrc  .profile  spaces in this filename
+bandit2@bandit:~$ cat spaces\ in\ this\ filename 
+UmHadQclWmgdLOKQ3YNgjWxGoRMb5luK
+```
+
+- bandit3
+```
+bandit3@bandit:~$ ls
+inhere
+bandit3@bandit:~$ ls -a
+.  ..  .bash_logout  .bashrc  inhere  .profile
+bandit3@bandit:~$ ls -l
+total 4
+drwxr-xr-x 2 root root 4096 Oct 16  2018 inhere
+bandit3@bandit:~$ cat inhere/
+cat: inhere/: Is a directory
+bandit3@bandit:~$ cd inhere/
+bandit3@bandit:~/inhere$ ls
+bandit3@bandit:~/inhere$ ls -a
+.  ..  .hidden
+bandit3@bandit:~/inhere$ cat .hidden 
+pIwrPrtPN36QITSp3EQaw936yaFoFgAB
+bandit3@bandit:~/inhere$ 
+```
+
+- bandit4
+```
+bandit4@bandit:~$ ls
+inhere
+bandit4@bandit:~$ ls -l
+total 4
+drwxr-xr-x 2 root root 4096 Oct 16  2018 inhere
+bandit4@bandit:~$ cd inhere/
+bandit4@bandit:~/inhere$ ls
+-file00  -file02  -file04  -file06  -file08
+-file01  -file03  -file05  -file07  -file09
+bandit4@bandit:~/inhere$ cat ./-file0*
+koReBOKuIDDepwhWk7jZC0RTdopnAYKh
+
+
+```
+
+- bandit5
+
+```
+ cat `find ./ -size 1033c`
+DXjZPULLxYr17uwoI01bNLQbtFemEgo7
+
+```
+
+- bandit6
+```
+bandit6@bandit:~$ find / -size 33c -user bandit7 -group bandit6 -readable
+
+/var/lib/dpkg/info/bandit7.password
+HKBPTKQnIay4Fw76bEy8PVxKEDQRKTzs
+
+```
+
+- bandit7
+
+```
+bandit7@bandit:~$ cat data.txt | grep millionth
+millionth	cvX2JJa4CFALtqS87jk27qwqGhBM9plV
+
+```
+
+- bandit8
+
+```
+bandit8@bandit:~$ cat data.txt | sort |uniq -u
+UsvVyFSfZZWbi6wgC7dAFyFuR6jQQUhR
+
+```
+
+- bandit9
+
+```
+bandit9@bandit:~$ cat data.txt | strings | grep -e="="
+2========== the
+========== password
+========== isa
+========== truKLdjsbJ5g7yyJ2X2R0o3a5HQJFuLk
+```
+
+- bandit10
+```
+bandit10@bandit:~$ man base64
+bandit10@bandit:~$ cat data.txt | base64 -d
+The password is IFukwKGsFW8MOq3IRFqrxE1hxTNEbUPR
+
+```
+
+- bandit11
+
+```
+https://en.wikipedia.org/wiki/ROT13
+
+bandit11@bandit:~$ cat data.txt | tr NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz
+The password is 5Te8Y4drgCRfCx8ugdwuEX8KFC6k2EUu
+
+```
+
+
